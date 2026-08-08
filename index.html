@@ -1089,19 +1089,58 @@ document.getElementById("registerForm").addEventListener("submit", async (e)=>{
 
 /* AUTH STATE */
 
-onAuthStateChanged(auth,(user)=>{
+onAuthStateChanged(auth, async (user) => {
 
-    if(user){
+    const loginBtn = document.querySelector(".login-btn");
 
-        console.log(
-            "Logged in:",
-            user.email
-        );
+    if (user) {
+
+        console.log("Logged in:", user.email);
+
+        // Get player data from Firestore
+        try {
+
+            const { getDoc } = await import(
+                "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js"
+            );
+
+            const playerRef = doc(db, "players", user.uid);
+            const playerSnap = await getDoc(playerRef);
+
+            if (playerSnap.exists()) {
+
+                const player = playerSnap.data();
+
+                loginBtn.textContent = "👤 " + player.name;
+
+            } else {
+
+                loginBtn.textContent = "👤 Player";
+
+            }
+
+        } catch (error) {
+
+            console.error(error);
+            loginBtn.textContent = "👤 Player";
+
+        }
+
+        loginBtn.onclick = function () {
+            openPlayerMenu();
+        };
+
+    } else {
+
+        loginBtn.textContent = "Login / Register";
+
+        loginBtn.onclick = function () {
+            openModal();
+        };
 
     }
 
 });
-
 
 function getErrorMessage(code){
 
@@ -1130,7 +1169,14 @@ function getErrorMessage(code){
 
 
 <script>
+    
+function openPlayerMenu(){
 
+    const user = window.firebaseUser;
+
+    alert("Player account is active!");
+
+}
 function openModal(){
 
     document
