@@ -1,20 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080b12">
 
-<title>BMG Official | eFootball Tournament</title>
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta
+    name="theme-color"
+    content="#080b12">
+
+<title>
+    BMG Official | eFootball Tournament
+</title>
+
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -33,25 +54,39 @@ button{
     cursor:pointer;
 }
 
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
 .container{
     width:92%;
     max-width:1200px;
     margin:auto;
 }
 
-/* ================= NAVBAR ================= */
+
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 .navbar{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(7,10,16,.94);
+
+    background:
+        rgba(7,10,16,.95);
+
     backdrop-filter:blur(12px);
-    border-bottom:1px solid #202634;
+
+    border-bottom:
+        1px solid #202634;
 }
 
 .nav{
     height:70px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -61,6 +96,7 @@ button{
     display:flex;
     align-items:center;
     gap:10px;
+
     font-size:20px;
     font-weight:800;
 }
@@ -68,11 +104,20 @@ button{
 .logo-icon{
     width:40px;
     height:40px;
+
     border-radius:12px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#1d73ff,#7c3cff);
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d73ff,
+            #7c3cff
+        );
+
     font-size:20px;
 }
 
@@ -83,7 +128,9 @@ button{
 .nav-links{
     display:flex;
     gap:28px;
+
     color:#aab2c2;
+
     font-size:14px;
 }
 
@@ -94,46 +141,77 @@ button{
 .login-btn{
     background:#246cff;
     color:#fff;
+
     padding:11px 18px;
+
     border-radius:10px;
+
     font-weight:700;
+
     max-width:180px;
+
     overflow:hidden;
     text-overflow:ellipsis;
     white-space:nowrap;
 }
 
-/* ================= HERO ================= */
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
     padding:80px 0 60px;
+
     background:
-    radial-gradient(circle at 80% 20%,rgba(43,111,255,.18),transparent 35%),
-    radial-gradient(circle at 20% 70%,rgba(124,60,255,.12),transparent 30%);
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(43,111,255,.18),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(124,60,255,.12),
+            transparent 30%
+        );
 }
 
 .hero-grid{
     display:grid;
-    grid-template-columns:1.2fr .8fr;
+
+    grid-template-columns:
+        1.2fr .8fr;
+
     gap:40px;
+
     align-items:center;
 }
 
 .badge{
     display:inline-block;
+
     padding:8px 13px;
+
     background:#101a2d;
+
     border:1px solid #263b66;
+
     color:#68a0ff;
+
     border-radius:30px;
+
     font-size:12px;
+
     font-weight:bold;
+
     margin-bottom:20px;
 }
 
 .hero h1{
     font-size:58px;
     line-height:1.02;
+
     margin-bottom:20px;
 }
 
@@ -143,80 +221,121 @@ button{
 
 .hero p{
     color:#9ca5b6;
+
     font-size:17px;
+
     line-height:1.7;
+
     max-width:600px;
 }
 
 .hero-buttons{
     display:flex;
+
     gap:12px;
+
     margin-top:28px;
 }
 
 .primary{
     background:#246cff;
+
     padding:14px 22px;
+
     border-radius:10px;
+
     color:#fff;
+
     font-weight:bold;
 }
 
 .secondary{
     background:#111722;
+
     border:1px solid #293142;
+
     padding:14px 22px;
+
     border-radius:10px;
+
     color:#fff;
+
     font-weight:bold;
 }
 
 .hero-card{
-    background:linear-gradient(145deg,#101722,#0b0f17);
+    background:
+        linear-gradient(
+            145deg,
+            #101722,
+            #0b0f17
+        );
+
     border:1px solid #222c3e;
+
     border-radius:22px;
+
     padding:28px;
-    box-shadow:0 20px 60px rgba(0,0,0,.3);
+
+    box-shadow:
+        0 20px 60px
+        rgba(0,0,0,.3);
 }
 
 .hero-card-top{
     display:flex;
     justify-content:space-between;
+
     margin-bottom:25px;
 }
 
 .live{
     color:#4dff9a;
+
     font-size:12px;
+
     font-weight:bold;
 }
 
 .score{
     text-align:center;
+
     font-size:38px;
+
     font-weight:800;
+
     margin:20px 0;
 }
 
 .teams{
     display:flex;
+
     justify-content:space-around;
+
     text-align:center;
 }
 
 .team-icon{
     width:58px;
     height:58px;
+
     border-radius:50%;
+
     background:#182237;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:25px;
+
     margin:auto auto 8px;
 }
 
-/* ================= SECTION ================= */
+
+/* =====================================================
+   SECTIONS
+===================================================== */
 
 section{
     padding:65px 0;
@@ -224,8 +343,11 @@ section{
 
 .section-head{
     display:flex;
+
     justify-content:space-between;
+
     align-items:end;
+
     margin-bottom:28px;
 }
 
@@ -235,21 +357,31 @@ section{
 
 .section-head p{
     color:#7f899b;
+
     margin-top:7px;
 }
 
-/* ================= TOURNAMENT CARDS ================= */
+
+/* =====================================================
+   TOURNAMENT CARDS
+===================================================== */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
 }
 
 .card{
     background:#0d121b;
+
     border:1px solid #202838;
+
     border-radius:16px;
+
     padding:22px;
 }
 
@@ -259,245 +391,336 @@ section{
 
 .tournament-status{
     display:inline-block;
+
     padding:5px 9px;
+
     border-radius:7px;
+
     background:#102b20;
+
     color:#4cff99;
+
     font-size:11px;
+
     font-weight:bold;
+
     margin-bottom:15px;
 }
 
 .card h3{
     font-size:20px;
+
     margin-bottom:10px;
 }
 
 .card p{
     color:#8993a5;
+
     font-size:14px;
+
     line-height:1.6;
 }
 
 .card-footer{
     display:flex;
+
     justify-content:space-between;
+
     margin-top:20px;
+
     padding-top:15px;
-    border-top:1px solid #202735;
+
+    border-top:
+        1px solid #202735;
+
     font-size:13px;
+
     color:#a5afc0;
 }
 
-/* ================= MATCHES ================= */
+
+/* =====================================================
+   MATCHES
+===================================================== */
 
 .match-list{
     display:flex;
+
     flex-direction:column;
+
     gap:12px;
 }
 
 .match{
     background:#0d121b;
+
     border:1px solid #202838;
+
     border-radius:14px;
+
     padding:18px;
+
     display:grid;
-    grid-template-columns:1fr auto 1fr;
+
+    grid-template-columns:
+        1fr auto 1fr;
+
     align-items:center;
+
     gap:15px;
 }
 
 .player{
     display:flex;
+
     align-items:center;
+
     gap:12px;
 }
 
 .player.right{
     justify-content:flex-end;
+
     text-align:right;
 }
 
 .avatar{
     width:40px;
     height:40px;
+
     background:#172237;
+
     border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     overflow:hidden;
 }
 
 .avatar img{
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
 .vs{
     color:#647086;
+
     font-size:12px;
+
     font-weight:bold;
 }
 
-/* ================= PLAYERS ================= */
 
-.players-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+/* =====================================================
+   PLAYERS TABLE
+===================================================== */
+
+.players-table-wrap{
+    width:100%;
+
+    overflow-x:auto;
+
+    background:#0d121b;
+
+    border:1px solid #202838;
+
+    border-radius:16px;
 }
 
-.player-card{
-    background:linear-gradient(145deg,#101722,#0b1018);
-    border:1px solid #202b3d;
-    border-radius:18px;
-    padding:22px;
+.players-table{
+    width:100%;
+
+    min-width:650px;
+
+    border-collapse:collapse;
+}
+
+.players-table th{
+    padding:14px 12px;
+
     text-align:center;
-    transition:.2s;
+
+    color:#707b8f;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    border-bottom:
+        1px solid #202838;
+
+    background:#0a0f17;
 }
 
-.player-card:hover{
-    border-color:#397cff;
-    transform:translateY(-2px);
+.players-table th:first-child{
+    text-align:left;
+
+    padding-left:18px;
 }
 
-.player-photo{
-    width:95px;
-    height:95px;
-    border-radius:50%;
-    margin:0 auto 15px;
-    background:#182237;
-    border:3px solid #246cff;
+.players-table td{
+    padding:12px;
+
+    text-align:center;
+
+    color:#dce3ef;
+
+    font-size:13px;
+
+    border-bottom:
+        1px solid #1b2331;
+}
+
+.players-table tbody tr:last-child td{
+    border-bottom:0;
+}
+
+.player-row{
+    cursor:pointer;
+
+    transition:
+        background .18s,
+        transform .18s;
+}
+
+.player-row:hover{
+    background:#121b2b;
+}
+
+.player-name-cell{
     display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+    text-align:left;
+
+    min-width:190px;
+}
+
+.table-avatar{
+    width:42px;
+    height:42px;
+
+    min-width:42px;
+
+    border-radius:50%;
+
+    background:#182237;
+
+    border:2px solid #246cff;
+
+    display:flex;
+
     align-items:center;
     justify-content:center;
+
     overflow:hidden;
-    font-size:38px;
+
+    font-size:20px;
 }
 
-.player-photo img{
+.table-avatar img{
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
-.player-card h3{
-    font-size:20px;
-    margin-bottom:7px;
+.table-player-name{
+    color:#fff;
+
+    font-size:14px;
+
+    font-weight:700;
 }
 
-.player-role{
-    display:inline-block;
-    background:#102b20;
-    color:#4cff99;
-    border-radius:20px;
-    padding:5px 10px;
-    font-size:10px;
-    font-weight:bold;
-    margin-bottom:18px;
-}
-
-.player-info{
-    text-align:left;
-    border-top:1px solid #202838;
-    padding-top:15px;
-}
-
-.info-row{
-    display:flex;
-    justify-content:space-between;
-    gap:10px;
-    padding:7px 0;
-    font-size:12px;
-}
-
-.info-label{
-    color:#778398;
-}
-
-.info-value{
-    color:#dce3ef;
-    text-align:right;
-    max-width:65%;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    white-space:nowrap;
-}
-
-.player-stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:6px;
-    margin-top:15px;
-}
-
-.stat{
-    background:#0a0f17;
-    border:1px solid #202838;
-    border-radius:9px;
-    padding:9px 4px;
-}
-
-.stat strong{
+.table-player-role{
     display:block;
-    color:#fff;
-    font-size:15px;
-}
 
-.stat span{
-    color:#667286;
+    color:#647086;
+
     font-size:9px;
+
+    margin-top:3px;
 }
 
-.view-profile{
-    width:100%;
-    margin-top:15px;
-    padding:10px;
-    background:#18243a;
-    color:#fff;
-    border-radius:8px;
-    font-weight:bold;
+.stat-number{
+    font-weight:700;
 }
 
-.view-profile:hover{
-    background:#246cff;
+.points{
+    color:#4d8dff;
+
+    font-weight:800;
+}
+
+.positive-gd{
+    color:#4cff99;
+
+    font-weight:700;
+}
+
+.negative-gd{
+    color:#ff6b7a;
+
+    font-weight:700;
 }
 
 .loading{
     text-align:center;
+
     color:#778398;
-    padding:40px 0;
+
+    padding:40px 20px;
 }
 
 .empty{
     text-align:center;
-    padding:40px;
+
+    padding:40px 20px;
+
     background:#0d121b;
+
     border:1px solid #202838;
+
     border-radius:15px;
+
     color:#778398;
 }
 
-/* ================= FEATURES ================= */
+
+/* =====================================================
+   FEATURES
+===================================================== */
 
 .features{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+        repeat(4,1fr);
+
     gap:15px;
 }
 
 .feature{
     padding:25px;
+
     background:#0d121b;
+
     border:1px solid #202838;
+
     border-radius:15px;
 }
 
 .feature-icon{
     font-size:28px;
+
     margin-bottom:15px;
 }
 
@@ -507,32 +730,55 @@ section{
 
 .feature p{
     color:#8993a5;
+
     font-size:13px;
+
     line-height:1.5;
 }
 
-/* ================= FOOTER ================= */
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
-    border-top:1px solid #202838;
+    border-top:
+        1px solid #202838;
+
     padding:35px 0;
+
     color:#727d90;
+
     text-align:center;
+
     font-size:13px;
 }
 
-/* ================= MODAL ================= */
+
+/* =====================================================
+   MODAL
+===================================================== */
 
 .modal{
     position:fixed;
+
     inset:0;
+
     z-index:3000;
-    background:rgba(0,0,0,.78);
+
+    background:
+        rgba(0,0,0,.78);
+
     backdrop-filter:blur(8px);
+
     display:none;
+
     align-items:center;
+
     justify-content:center;
+
     padding:20px;
+
     overflow-y:auto;
 }
 
@@ -542,22 +788,35 @@ footer{
 
 .modal-box{
     width:100%;
+
     max-width:430px;
+
     max-height:90vh;
+
     overflow-y:auto;
+
     background:#10151e;
+
     border:1px solid #293448;
+
     border-radius:18px;
+
     padding:25px;
+
     position:relative;
 }
 
 .close{
     position:absolute;
+
     right:18px;
+
     top:15px;
+
     background:none;
+
     color:#8993a5;
+
     font-size:25px;
 }
 
@@ -567,26 +826,35 @@ footer{
 
 .modal-sub{
     color:#7f899b;
+
     font-size:13px;
+
     margin-bottom:22px;
 }
 
 .tabs{
     display:flex;
+
     gap:8px;
+
     margin-bottom:20px;
 }
 
 .tab{
     flex:1;
+
     padding:10px;
+
     border-radius:8px;
+
     background:#171e2a;
+
     color:#9ca6b8;
 }
 
 .tab.active{
     background:#246cff;
+
     color:white;
 }
 
@@ -596,18 +864,27 @@ footer{
 
 .form-group label{
     display:block;
+
     color:#aab3c2;
+
     font-size:12px;
+
     margin-bottom:7px;
 }
 
 .form-group input{
     width:100%;
+
     background:#0a0f17;
+
     border:1px solid #283243;
+
     color:white;
+
     padding:12px;
+
     border-radius:9px;
+
     outline:none;
 }
 
@@ -621,22 +898,36 @@ footer{
 
 .submit{
     width:100%;
+
     padding:13px;
+
     background:#246cff;
+
     color:white;
+
     border-radius:9px;
+
     font-weight:bold;
+
     margin-top:5px;
 }
 
 .message{
     margin-top:12px;
+
     font-size:13px;
+
     color:#62ff9c;
+
     text-align:center;
+
+    min-height:18px;
 }
 
-/* ================= PROFILE ================= */
+
+/* =====================================================
+   PUBLIC PROFILE
+===================================================== */
 
 .profile-box{
     max-width:440px;
@@ -644,26 +935,38 @@ footer{
 
 .profile-header{
     text-align:center;
-    padding:10px 0 20px;
+
+    padding:
+        10px 0 20px;
 }
 
 .profile-photo{
-    width:110px;
-    height:110px;
+    width:100px;
+    height:100px;
+
     border-radius:50%;
-    margin:0 auto 15px;
+
+    margin:
+        0 auto 15px;
+
     background:#182237;
+
     border:3px solid #397cff;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     overflow:hidden;
+
     font-size:42px;
 }
 
 .profile-photo img{
     width:100%;
     height:100%;
+
     object-fit:cover;
 }
 
@@ -673,24 +976,36 @@ footer{
 
 .profile-role{
     color:#4cff99;
+
     font-size:11px;
+
     font-weight:bold;
+
     margin-top:6px;
 }
 
 .profile-details{
     background:#0a0f17;
+
     border:1px solid #202838;
+
     border-radius:12px;
-    padding:12px 15px;
+
+    padding:
+        12px 15px;
 }
 
 .profile-row{
     display:flex;
+
     justify-content:space-between;
+
     gap:15px;
+
     padding:12px 0;
-    border-bottom:1px solid #202838;
+
+    border-bottom:
+        1px solid #202838;
 }
 
 .profile-row:last-child{
@@ -699,52 +1014,86 @@ footer{
 
 .profile-row span:first-child{
     color:#718096;
+
     font-size:12px;
 }
 
 .profile-row span:last-child{
     color:#fff;
+
     font-size:12px;
+
     font-weight:bold;
+
     text-align:right;
+
     max-width:60%;
+
     overflow:hidden;
+
     text-overflow:ellipsis;
+
+    white-space:nowrap;
 }
 
 .profile-stats{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:8px;
+
+    grid-template-columns:
+        repeat(6,1fr);
+
+    gap:6px;
+
     margin-top:15px;
 }
 
 .profile-stat{
     background:#0a0f17;
+
     border:1px solid #202838;
+
     border-radius:10px;
-    padding:12px 5px;
+
+    padding:10px 3px;
+
     text-align:center;
 }
 
 .profile-stat strong{
     display:block;
-    font-size:18px;
+
+    font-size:15px;
 }
 
 .profile-stat span{
     color:#718096;
-    font-size:10px;
+
+    font-size:8px;
+}
+
+.profile-stat.points-box strong{
+    color:#4d8dff;
+}
+
+.profile-stat.gd-box strong{
+    color:#4cff99;
 }
 
 .logout-btn{
     width:100%;
+
     padding:12px;
+
     margin-top:15px;
+
     border-radius:9px;
+
     background:#35151b;
+
     border:1px solid #6b2631;
+
     color:#ff7785;
+
     font-weight:bold;
 }
 
@@ -752,7 +1101,10 @@ footer{
     background:#4a1820;
 }
 
-/* ================= MOBILE ================= */
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:850px){
 
@@ -761,7 +1113,8 @@ footer{
     }
 
     .hero{
-        padding:55px 0 35px;
+        padding:
+            55px 0 35px;
     }
 
     .hero-grid{
@@ -776,12 +1129,9 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .players-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
     .features{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .match{
@@ -791,6 +1141,7 @@ footer{
     .player,
     .player.right{
         justify-content:center;
+
         text-align:center;
     }
 
@@ -798,6 +1149,45 @@ footer{
         text-align:center;
     }
 }
+
+
+@media(max-width:600px){
+
+    .players-table{
+        min-width:620px;
+    }
+
+    .players-table th{
+        font-size:10px;
+
+        padding:
+            11px 8px;
+    }
+
+    .players-table td{
+        padding:
+            10px 8px;
+
+        font-size:12px;
+    }
+
+    .table-avatar{
+        width:38px;
+        height:38px;
+
+        min-width:38px;
+    }
+
+    .table-player-name{
+        font-size:13px;
+    }
+
+    .profile-stats{
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+}
+
 
 @media(max-width:500px){
 
@@ -815,16 +1205,15 @@ footer{
     }
 
     .login-btn{
-        padding:9px 10px;
+        padding:
+            9px 10px;
+
         font-size:11px;
+
         max-width:120px;
     }
 
     .features{
-        grid-template-columns:1fr;
-    }
-
-    .players-grid{
         grid-template-columns:1fr;
     }
 
@@ -847,12 +1236,16 @@ footer{
 }
 
 </style>
+
 </head>
+
 
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <header class="navbar">
 
@@ -868,9 +1261,12 @@ footer{
 
     </div>
 
+
     <nav class="nav-links">
 
-        <a href="#home">Home</a>
+        <a href="#home">
+            Home
+        </a>
 
         <a href="#tournaments">
             Tournaments
@@ -885,6 +1281,7 @@ footer{
         </a>
 
     </nav>
+
 
     <button
         class="login-btn"
@@ -901,11 +1298,16 @@ footer{
 
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-<section class="hero" id="home">
+<section
+    class="hero"
+    id="home">
 
 <div class="container hero-grid">
+
 
 <div>
 
@@ -913,17 +1315,26 @@ footer{
         ⚡ BMG OFFICIAL • eFOOTBALL
     </div>
 
+
     <h1>
+
         Compete.<br>
+
         <span>Dominate.</span><br>
+
         Become a Legend.
+
     </h1>
 
+
     <p>
+
         Welcome to Bangladesh Mighty Gamers Official.
-        Join tournaments, compete with the best eFootball players
-        and write your name in BMG history.
+        Join tournaments, compete with the best
+        eFootball players and write your name in BMG history.
+
     </p>
+
 
     <div class="hero-buttons">
 
@@ -934,6 +1345,7 @@ footer{
             🏆 View Tournaments
 
         </a>
+
 
         <button
             class="secondary"
@@ -946,6 +1358,7 @@ footer{
     </div>
 
 </div>
+
 
 
 <div class="hero-card">
@@ -962,13 +1375,23 @@ footer{
 
     </div>
 
-    <div style="text-align:center;color:#7f899b;font-size:12px;">
+
+    <div
+        style="
+            text-align:center;
+            color:#7f899b;
+            font-size:12px;
+        ">
+
         BMG eFootball League
+
     </div>
+
 
     <div class="score">
         3 - 2
     </div>
+
 
     <div class="teams">
 
@@ -983,6 +1406,7 @@ footer{
             </strong>
 
         </div>
+
 
         <div>
 
@@ -1006,7 +1430,9 @@ footer{
 
 
 
-<!-- ================= TOURNAMENTS ================= -->
+<!-- =====================================================
+     TOURNAMENTS
+===================================================== -->
 
 <section id="tournaments">
 
@@ -1047,6 +1473,7 @@ footer{
         Prove yourself against the best players.
     </p>
 
+
     <div class="card-footer">
 
         <span>
@@ -1060,6 +1487,7 @@ footer{
     </div>
 
 </div>
+
 
 
 <div class="card">
@@ -1077,6 +1505,7 @@ footer{
         fixtures and official results.
     </p>
 
+
     <div class="card-footer">
 
         <span>
@@ -1090,6 +1519,7 @@ footer{
     </div>
 
 </div>
+
 
 
 <div class="card">
@@ -1106,6 +1536,7 @@ footer{
         Knockout tournament where one mistake
         can send you home.
     </p>
+
 
     <div class="card-footer">
 
@@ -1130,7 +1561,9 @@ footer{
 
 
 
-<!-- ================= MATCHES ================= -->
+<!-- =====================================================
+     MATCHES
+===================================================== -->
 
 <section id="matches">
 
@@ -1170,9 +1603,11 @@ footer{
 
     </div>
 
+
     <div class="vs">
         3 - 2
     </div>
+
 
     <div class="player right">
 
@@ -1189,6 +1624,7 @@ footer{
 </div>
 
 
+
 <div class="match">
 
     <div class="player">
@@ -1203,9 +1639,11 @@ footer{
 
     </div>
 
+
     <div class="vs">
         1 - 1
     </div>
+
 
     <div class="player right">
 
@@ -1222,6 +1660,7 @@ footer{
 </div>
 
 
+
 <div class="match">
 
     <div class="player">
@@ -1236,9 +1675,11 @@ footer{
 
     </div>
 
+
     <div class="vs">
         2 - 0
     </div>
+
 
     <div class="player right">
 
@@ -1263,7 +1704,9 @@ footer{
 
 
 
-<!-- ================= PLAYERS ================= -->
+<!-- =====================================================
+     PLAYERS
+===================================================== -->
 
 <section id="players">
 
@@ -1278,7 +1721,7 @@ footer{
     </h2>
 
     <p>
-        Official registered BMG players.
+        Click any player to view their public profile.
     </p>
 
 </div>
@@ -1286,9 +1729,7 @@ footer{
 </div>
 
 
-<div
-    class="players-grid"
-    id="playersGrid">
+<div id="playersGrid">
 
     <div class="loading">
         Loading players...
@@ -1302,7 +1743,9 @@ footer{
 
 
 
-<!-- ================= FEATURES ================= -->
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
 <section>
 
@@ -1345,6 +1788,7 @@ footer{
 </div>
 
 
+
 <div class="feature">
 
     <div class="feature-icon">
@@ -1362,6 +1806,7 @@ footer{
 </div>
 
 
+
 <div class="feature">
 
     <div class="feature-icon">
@@ -1373,10 +1818,11 @@ footer{
     </h3>
 
     <p>
-        Track your results, wins and tournament progress.
+        Track your wins, draws, losses and points.
     </p>
 
 </div>
+
 
 
 <div class="feature">
@@ -1404,7 +1850,9 @@ footer{
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1428,13 +1876,16 @@ footer{
 
 
 
-<!-- ================= LOGIN MODAL ================= -->
+<!-- =====================================================
+     LOGIN / REGISTER MODAL
+===================================================== -->
 
 <div
     class="modal"
     id="authModal">
 
 <div class="modal-box">
+
 
 <button
     class="close"
@@ -1449,9 +1900,13 @@ footer{
     Welcome to BMG
 </h2>
 
+
 <p class="modal-sub">
+
     Login or create your official BMG player account.
+
 </p>
+
 
 
 <div class="tabs">
@@ -1479,9 +1934,10 @@ footer{
 
 
 
-<!-- LOGIN -->
+<!-- LOGIN FORM -->
 
 <form id="loginForm">
+
 
 <div class="form-group">
 
@@ -1495,6 +1951,7 @@ footer{
     required>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1511,6 +1968,7 @@ footer{
 </div>
 
 
+
 <button
     class="submit"
     type="submit">
@@ -1523,7 +1981,7 @@ footer{
 
 
 
-<!-- REGISTER -->
+<!-- REGISTER FORM -->
 
 <form
     id="registerForm"
@@ -1540,9 +1998,11 @@ footer{
     type="text"
     id="playerName"
     placeholder="Your BMG player name"
+    maxlength="40"
     required>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1557,14 +2017,21 @@ footer{
     accept="image/*"
     required>
 
-<small
-    style="display:block;color:#707b8f;margin-top:6px;font-size:11px;">
 
-    Maximum file size: 1.2MB
+<small
+    style="
+        display:block;
+        color:#707b8f;
+        margin-top:6px;
+        font-size:11px;
+    ">
+
+    Maximum original file size: 1.2MB
 
 </small>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1577,9 +2044,11 @@ footer{
     type="text"
     id="konamiUid"
     placeholder="Enter your Konami UID"
+    maxlength="50"
     required>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1592,9 +2061,11 @@ footer{
     type="text"
     id="deviceModel"
     placeholder="Example: Redmi Note 13 Pro"
+    maxlength="60"
     required>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1609,6 +2080,7 @@ footer{
     required>
 
 </div>
+
 
 
 <div class="form-group">
@@ -1626,6 +2098,7 @@ footer{
 </div>
 
 
+
 <button
     class="submit"
     type="submit">
@@ -1637,24 +2110,30 @@ footer{
 </form>
 
 
+
 <div
     class="message"
     id="message">
+
+</div>
+
+
 </div>
 
 </div>
 
-</div>
 
 
-
-<!-- ================= PLAYER PROFILE MODAL ================= -->
+<!-- =====================================================
+     PUBLIC PLAYER PROFILE
+===================================================== -->
 
 <div
     class="modal"
     id="profileModal">
 
 <div class="modal-box profile-box">
+
 
 <button
     class="close"
@@ -1665,7 +2144,9 @@ footer{
 </button>
 
 
+
 <div class="profile-header">
+
 
 <div
     class="profile-photo"
@@ -1685,11 +2166,12 @@ footer{
     class="profile-role"
     id="profileRole">
 
-    BMG PLAYER
+    ⚡ BMG PLAYER
 
 </div>
 
 </div>
+
 
 
 <div class="profile-details">
@@ -1708,6 +2190,7 @@ footer{
 </div>
 
 
+
 <div class="profile-row">
 
 <span>
@@ -1720,34 +2203,8 @@ footer{
 
 </div>
 
-
-<div class="profile-row">
-
-<span>
-    📧 Email
-</span>
-
-<span id="profileEmail">
-    -
-</span>
-
 </div>
 
-
-<div class="profile-row">
-
-<span>
-    🔑 Firebase UID
-</span>
-
-<span id="profileUid">
-    -
-</span>
-
-</div>
-
-
-</div>
 
 
 <div class="profile-stats">
@@ -1760,10 +2217,25 @@ footer{
 </strong>
 
 <span>
-    WINS
+    W
 </span>
 
 </div>
+
+
+
+<div class="profile-stat">
+
+<strong id="profileDraws">
+    0
+</strong>
+
+<span>
+    D
+</span>
+
+</div>
+
 
 
 <div class="profile-stat">
@@ -1773,20 +2245,49 @@ footer{
 </strong>
 
 <span>
-    LOSSES
+    L
 </span>
 
 </div>
 
 
-<div class="profile-stat">
 
-<strong id="profileMatches">
+<div class="profile-stat points-box">
+
+<strong id="profilePoints">
     0
 </strong>
 
 <span>
-    MATCHES
+    PTS
+</span>
+
+</div>
+
+
+
+<div class="profile-stat gd-box">
+
+<strong id="profileGD">
+    0
+</strong>
+
+<span>
+    GD
+</span>
+
+</div>
+
+
+
+<div class="profile-stat">
+
+<strong id="profileGF">
+    0
+</strong>
+
+<span>
+    GF
 </span>
 
 </div>
@@ -1795,57 +2296,72 @@ footer{
 </div>
 
 
-<button
-    class="logout-btn"
-    onclick="logoutUser()">
-
-    🚪 Logout
-
-</button>
-
-
 </div>
 
 </div>
 
 
 
-<!-- ================= FIREBASE ================= -->
+<!-- =====================================================
+     FIREBASE
+===================================================== -->
 
 <script type="module">
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+
+/* =====================================================
+   FIREBASE IMPORTS
+===================================================== */
+
+import {
+    initializeApp
+}
+from
+"https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 
 
 import {
 
     getAuth,
+
     createUserWithEmailAndPassword,
+
     signInWithEmailAndPassword,
+
     onAuthStateChanged,
+
     signOut
 
 }
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+from
+"https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 
 import {
 
     getFirestore,
+
     doc,
+
     setDoc,
+
     getDoc,
+
     collection,
+
     getDocs,
+
     serverTimestamp
 
 }
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+from
+"https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
 
 
-/* ================= FIREBASE CONFIG ================= */
+/* =====================================================
+   FIREBASE CONFIG
+===================================================== */
 
 const firebaseConfig = {
 
@@ -1873,6 +2389,11 @@ const firebaseConfig = {
 };
 
 
+
+/* =====================================================
+   INITIALIZE FIREBASE
+===================================================== */
+
 const app =
     initializeApp(firebaseConfig);
 
@@ -1886,7 +2407,9 @@ const db =
 
 
 
-/* ================= GLOBAL USER ================= */
+/* =====================================================
+   GLOBAL VARIABLES
+===================================================== */
 
 let currentUser = null;
 
@@ -1894,397 +2417,584 @@ let currentPlayerData = null;
 
 
 
-/* ================= IMAGE COMPRESS ================= */
-
-/*
-
-   Image প্রথমে browser-এ compress হবে।
-
-   Firebase Storage লাগবে না।
-
-*/
+/* =====================================================
+   IMAGE COMPRESSION
+===================================================== */
 
 function compressImage(file){
 
-    return new Promise((resolve,reject)=>{
+    return new Promise(
+        (resolve,reject)=>{
 
-        const reader = new FileReader();
-
-        reader.onload = function(event){
-
-            const img = new Image();
-
-            img.onload = function(){
-
-                const canvas =
-                    document.createElement("canvas");
-
-                const maxWidth = 500;
-                const maxHeight = 500;
-
-                let width = img.width;
-                let height = img.height;
+            const reader =
+                new FileReader();
 
 
-                if(width > height){
+            reader.onload =
+                function(event){
 
-                    if(width > maxWidth){
-
-                        height =
-                            height * maxWidth / width;
-
-                        width = maxWidth;
-
-                    }
-
-                }else{
-
-                    if(height > maxHeight){
-
-                        width =
-                            width * maxHeight / height;
-
-                        height = maxHeight;
-
-                    }
-
-                }
+                    const img =
+                        new Image();
 
 
-                canvas.width = width;
-                canvas.height = height;
+                    img.onload =
+                        function(){
+
+                            const canvas =
+                                document.createElement(
+                                    "canvas"
+                                );
 
 
-                const ctx =
-                    canvas.getContext("2d");
+                            const maxWidth = 500;
 
-                ctx.drawImage(
-                    img,
-                    0,
-                    0,
-                    width,
-                    height
-                );
+                            const maxHeight = 500;
 
 
-                /* JPEG quality */
+                            let width =
+                                img.width;
 
-                let quality = 0.75;
+                            let height =
+                                img.height;
 
-                let dataUrl =
-                    canvas.toDataURL(
-                        "image/jpeg",
-                        quality
+
+                            if(
+                                width >
+                                maxWidth
+                            ){
+
+                                height =
+                                    height *
+                                    maxWidth /
+                                    width;
+
+                                width =
+                                    maxWidth;
+
+                            }
+
+
+                            if(
+                                height >
+                                maxHeight
+                            ){
+
+                                width =
+                                    width *
+                                    maxHeight /
+                                    height;
+
+                                height =
+                                    maxHeight;
+
+                            }
+
+
+                            canvas.width =
+                                Math.round(width);
+
+                            canvas.height =
+                                Math.round(height);
+
+
+                            const ctx =
+                                canvas.getContext(
+                                    "2d"
+                                );
+
+
+                            ctx.drawImage(
+                                img,
+                                0,
+                                0,
+                                canvas.width,
+                                canvas.height
+                            );
+
+
+                            let quality = 0.75;
+
+                            let dataUrl =
+                                canvas.toDataURL(
+                                    "image/jpeg",
+                                    quality
+                                );
+
+
+                            /*
+                               Keep image small enough
+                               for Firestore.
+                            */
+
+                            while(
+                                dataUrl.length >
+                                160000 &&
+                                quality >
+                                0.25
+                            ){
+
+                                quality -= 0.08;
+
+
+                                dataUrl =
+                                    canvas.toDataURL(
+                                        "image/jpeg",
+                                        quality
+                                    );
+
+                            }
+
+
+                            /*
+                               Final safety check.
+                            */
+
+                            if(
+                                dataUrl.length >
+                                250000
+                            ){
+
+                                reject(
+                                    new Error(
+                                        "Image could not be compressed enough."
+                                    )
+                                );
+
+                                return;
+
+                            }
+
+
+                            resolve(dataUrl);
+
+                        };
+
+
+                    img.onerror =
+                        function(){
+
+                            reject(
+                                new Error(
+                                    "Image could not be loaded."
+                                )
+                            );
+
+                        };
+
+
+                    img.src =
+                        event.target.result;
+
+                };
+
+
+            reader.onerror =
+                function(){
+
+                    reject(
+                        new Error(
+                            "Could not read image."
+                        )
                     );
 
-
-                /*
-                   যদি image অনেক বড় হয়,
-                   আরও compress করবে।
-                */
-
-                while(
-                    dataUrl.length > 180000 &&
-                    quality > 0.25
-                ){
-
-                    quality -= 0.10;
-
-                    dataUrl =
-                        canvas.toDataURL(
-                            "image/jpeg",
-                            quality
-                        );
-
-                }
+                };
 
 
-                resolve(dataUrl);
+            reader.readAsDataURL(file);
 
-            };
-
-
-            img.onerror = function(){
-
-                reject(
-                    new Error("Image could not be loaded.")
-                );
-
-            };
-
-
-            img.src = event.target.result;
-
-        };
-
-
-        reader.onerror = function(){
-
-            reject(
-                new Error("Could not read image.")
-            );
-
-        };
-
-
-        reader.readAsDataURL(file);
-
-    });
+        }
+    );
 
 }
 
 
 
-/* ================= LOGIN ================= */
+/* =====================================================
+   LOGIN
+===================================================== */
 
 document
 .getElementById("loginForm")
-.addEventListener("submit", async (e)=>{
+.addEventListener(
+    "submit",
+    async(e)=>{
 
-    e.preventDefault();
-
-
-    const email =
-        document.getElementById("loginEmail").value.trim();
+        e.preventDefault();
 
 
-    const password =
-        document.getElementById("loginPassword").value;
+        const email =
+            document
+            .getElementById(
+                "loginEmail"
+            )
+            .value
+            .trim();
 
 
-    const message =
-        document.getElementById("message");
+        const password =
+            document
+            .getElementById(
+                "loginPassword"
+            )
+            .value;
 
 
-    message.textContent =
-        "Logging in...";
-
-
-    try{
-
-        await signInWithEmailAndPassword(
-            auth,
-            email,
-            password
-        );
+        const message =
+            document.getElementById(
+                "message"
+            );
 
 
         message.textContent =
-            "✅ Login successful!";
+            "Logging in...";
 
 
-        setTimeout(()=>{
+        try{
 
-            closeModal();
-
-        },800);
-
-
-    }catch(error){
-
-        console.error(error);
-
-        message.textContent =
-            "❌ " + getErrorMessage(error.code);
-
-    }
-
-});
-
-
-
-/* ================= REGISTER ================= */
-
-document
-.getElementById("registerForm")
-.addEventListener("submit", async (e)=>{
-
-    e.preventDefault();
-
-
-    const name =
-        document
-        .getElementById("playerName")
-        .value
-        .trim();
-
-
-    const konamiUid =
-        document
-        .getElementById("konamiUid")
-        .value
-        .trim();
-
-
-    const deviceModel =
-        document
-        .getElementById("deviceModel")
-        .value
-        .trim();
-
-
-    const email =
-        document
-        .getElementById("registerEmail")
-        .value
-        .trim();
-
-
-    const password =
-        document
-        .getElementById("registerPassword")
-        .value;
-
-
-    const imageFile =
-        document
-        .getElementById("playerImage")
-        .files[0];
-
-
-    const message =
-        document.getElementById("message");
-
-
-
-    /* Image check */
-
-    if(!imageFile){
-
-        message.textContent =
-            "❌ Please select a player image.";
-
-        return;
-
-    }
-
-
-    if(
-        imageFile.size >
-        1.2 * 1024 * 1024
-    ){
-
-        message.textContent =
-            "❌ Image must be under 1.2MB.";
-
-        return;
-
-    }
-
-
-    message.textContent =
-        "Creating player account...";
-
-
-    try{
-
-
-        /* Create Firebase Auth account */
-
-        const userCredential =
-            await createUserWithEmailAndPassword(
+            await signInWithEmailAndPassword(
                 auth,
                 email,
                 password
             );
 
 
-        const user =
-            userCredential.user;
+            message.textContent =
+                "✅ Login successful!";
 
 
+            setTimeout(
+                ()=>{
 
-        message.textContent =
-            "Uploading player information...";
+                    closeModal();
 
-
-
-        /* Compress image */
-
-        const imageData =
-            await compressImage(imageFile);
+                },
+                800
+            );
 
 
+        }catch(error){
 
-        /* Save player */
-
-        await setDoc(
-
-            doc(
-                db,
-                "players",
-                user.uid
-            ),
-
-            {
-
-                name:name,
-
-                playerImage:imageData,
-
-                konamiUid:konamiUid,
-
-                deviceModel:deviceModel,
-
-                email:email,
-
-                uid:user.uid,
-
-                role:"player",
-
-                wins:0,
-
-                losses:0,
-
-                matches:0,
-
-                createdAt:
-                    serverTimestamp()
-
-            }
-
-        );
+            console.error(error);
 
 
-        message.textContent =
-            "✅ Player account created successfully!";
+            message.textContent =
+                "❌ " +
+                getErrorMessage(
+                    error.code
+                );
 
-
-        document
-        .getElementById("registerForm")
-        .reset();
-
-
-        /* Refresh players */
-
-        await loadPlayers();
-
-
-        setTimeout(()=>{
-
-            closeModal();
-
-        },1200);
-
-
-    }catch(error){
-
-        console.error(error);
-
-        message.textContent =
-            "❌ " +
-            getErrorMessage(error.code);
+        }
 
     }
-
-});
-
+);
 
 
-/* ================= AUTH STATE ================= */
+
+/* =====================================================
+   REGISTER
+===================================================== */
+
+document
+.getElementById("registerForm")
+.addEventListener(
+    "submit",
+    async(e)=>{
+
+        e.preventDefault();
+
+
+        const name =
+            document
+            .getElementById(
+                "playerName"
+            )
+            .value
+            .trim();
+
+
+        const konamiUid =
+            document
+            .getElementById(
+                "konamiUid"
+            )
+            .value
+            .trim();
+
+
+        const deviceModel =
+            document
+            .getElementById(
+                "deviceModel"
+            )
+            .value
+            .trim();
+
+
+        const email =
+            document
+            .getElementById(
+                "registerEmail"
+            )
+            .value
+            .trim();
+
+
+        const password =
+            document
+            .getElementById(
+                "registerPassword"
+            )
+            .value;
+
+
+        const imageFile =
+            document
+            .getElementById(
+                "playerImage"
+            )
+            .files[0];
+
+
+        const message =
+            document.getElementById(
+                "message"
+            );
+
+
+        /* ---------------------------------------------
+           VALIDATION
+        --------------------------------------------- */
+
+        if(!name){
+
+            message.textContent =
+                "❌ Enter player name.";
+
+            return;
+
+        }
+
+
+        if(!imageFile){
+
+            message.textContent =
+                "❌ Please select a player image.";
+
+            return;
+
+        }
+
+
+        if(
+            imageFile.size >
+            1.2 * 1024 * 1024
+        ){
+
+            message.textContent =
+                "❌ Image must be under 1.2MB.";
+
+            return;
+
+        }
+
+
+        if(!konamiUid){
+
+            message.textContent =
+                "❌ Enter Konami UID.";
+
+            return;
+
+        }
+
+
+        if(!deviceModel){
+
+            message.textContent =
+                "❌ Enter device model.";
+
+            return;
+
+        }
+
+
+        message.textContent =
+            "Creating player account...";
+
+
+        try{
+
+
+            /* -----------------------------------------
+               CREATE AUTH ACCOUNT
+            ----------------------------------------- */
+
+            const userCredential =
+                await createUserWithEmailAndPassword(
+                    auth,
+                    email,
+                    password
+                );
+
+
+            const user =
+                userCredential.user;
+
+
+            message.textContent =
+                "Compressing player image...";
+
+
+            /* -----------------------------------------
+               COMPRESS IMAGE
+            ----------------------------------------- */
+
+            const imageData =
+                await compressImage(
+                    imageFile
+                );
+
+
+            message.textContent =
+                "Saving player information...";
+
+
+            /* -----------------------------------------
+               PUBLIC PLAYER DOCUMENT
+               
+               IMPORTANT:
+               NO EMAIL HERE.
+               NO FIREBASE UID HERE.
+            ----------------------------------------- */
+
+            await setDoc(
+
+                doc(
+                    db,
+                    "players",
+                    user.uid
+                ),
+
+                {
+
+                    name:
+                        name,
+
+                    playerImage:
+                        imageData,
+
+                    konamiUid:
+                        konamiUid,
+
+                    deviceModel:
+                        deviceModel,
+
+                    role:
+                        "player",
+
+                    wins:
+                        0,
+
+                    draws:
+                        0,
+
+                    losses:
+                        0,
+
+                    goalsFor:
+                        0,
+
+                    goalsAgainst:
+                        0,
+
+                    createdAt:
+                        serverTimestamp()
+
+                }
+
+            );
+
+
+            /* -----------------------------------------
+               PRIVATE DOCUMENT
+
+               EMAIL ONLY HERE
+            ----------------------------------------- */
+
+            await setDoc(
+
+                doc(
+                    db,
+                    "privatePlayers",
+                    user.uid
+                ),
+
+                {
+
+                    email:
+                        email,
+
+                    uid:
+                        user.uid,
+
+                    createdAt:
+                        serverTimestamp()
+
+                }
+
+            );
+
+
+            message.textContent =
+                "✅ Player account created successfully!";
+
+
+            document
+            .getElementById(
+                "registerForm"
+            )
+            .reset();
+
+
+            await loadPlayers();
+
+
+            setTimeout(
+                ()=>{
+
+                    closeModal();
+
+                },
+                1200
+            );
+
+
+        }catch(error){
+
+            console.error(error);
+
+
+            message.textContent =
+                "❌ " +
+                getErrorMessage(
+                    error.code
+                );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   AUTH STATE
+===================================================== */
 
 onAuthStateChanged(
+
     auth,
+
     async(user)=>{
 
         const loginBtn =
@@ -2295,7 +3005,8 @@ onAuthStateChanged(
 
         if(user){
 
-            currentUser = user;
+            currentUser =
+                user;
 
 
             try{
@@ -2309,10 +3020,14 @@ onAuthStateChanged(
 
 
                 const playerSnap =
-                    await getDoc(playerRef);
+                    await getDoc(
+                        playerRef
+                    );
 
 
-                if(playerSnap.exists()){
+                if(
+                    playerSnap.exists()
+                ){
 
                     currentPlayerData =
                         playerSnap.data();
@@ -2353,9 +3068,11 @@ onAuthStateChanged(
 
         }else{
 
-            currentUser = null;
+            currentUser =
+                null;
 
-            currentPlayerData = null;
+            currentPlayerData =
+                null;
 
 
             loginBtn.textContent =
@@ -2372,11 +3089,14 @@ onAuthStateChanged(
         }
 
     }
+
 );
 
 
 
-/* ================= LOAD PLAYERS ================= */
+/* =====================================================
+   LOAD PLAYERS
+===================================================== */
 
 async function loadPlayers(){
 
@@ -2386,10 +3106,15 @@ async function loadPlayers(){
         );
 
 
-    grid.innerHTML =
-        `<div class="loading">
+    grid.innerHTML = `
+
+        <div class="loading">
+
             Loading players...
-        </div>`;
+
+        </div>
+
+    `;
 
 
     try{
@@ -2403,35 +3128,378 @@ async function loadPlayers(){
             );
 
 
-        if(playersSnapshot.empty){
+        if(
+            playersSnapshot.empty
+        ){
 
-            grid.innerHTML =
-                `<div class="empty">
+            grid.innerHTML = `
+
+                <div class="empty">
+
                     👥 No players registered yet.
-                </div>`;
+
+                </div>
+
+            `;
 
             return;
 
         }
 
 
-        grid.innerHTML = "";
+        let players = [];
 
 
         playersSnapshot.forEach(
             (playerDoc)=>{
 
-                const player =
-                    playerDoc.data();
+                players.push({
+
+                    id:
+                        playerDoc.id,
+
+                    ...playerDoc.data()
+
+                });
+
+            }
+        );
 
 
-                createPlayerCard(
-                    player,
-                    playerDoc.id
+        /* ---------------------------------------------
+           SORTING
+
+           1. Points
+           2. GD
+           3. GF
+        --------------------------------------------- */
+
+        players.sort(
+            (a,b)=>{
+
+                const aWins =
+                    Number(
+                        a.wins || 0
+                    );
+
+                const aDraws =
+                    Number(
+                        a.draws || 0
+                    );
+
+
+                const bWins =
+                    Number(
+                        b.wins || 0
+                    );
+
+                const bDraws =
+                    Number(
+                        b.draws || 0
+                    );
+
+
+                const aPts =
+                    (
+                        aWins * 3
+                    ) +
+                    aDraws;
+
+
+                const bPts =
+                    (
+                        bWins * 3
+                    ) +
+                    bDraws;
+
+
+                const aGF =
+                    Number(
+                        a.goalsFor ||
+                        a.gf ||
+                        0
+                    );
+
+
+                const aGA =
+                    Number(
+                        a.goalsAgainst ||
+                        a.ga ||
+                        0
+                    );
+
+
+                const bGF =
+                    Number(
+                        b.goalsFor ||
+                        b.gf ||
+                        0
+                    );
+
+
+                const bGA =
+                    Number(
+                        b.goalsAgainst ||
+                        b.ga ||
+                        0
+                    );
+
+
+                const aGD =
+                    aGF - aGA;
+
+
+                const bGD =
+                    bGF - bGA;
+
+
+                return (
+
+                    bPts - aPts ||
+
+                    bGD - aGD ||
+
+                    bGF - aGF
+
                 );
 
             }
         );
+
+
+        let rows = "";
+
+
+        players.forEach(
+            (player,index)=>{
+
+                const wins =
+                    Number(
+                        player.wins || 0
+                    );
+
+
+                const draws =
+                    Number(
+                        player.draws || 0
+                    );
+
+
+                const losses =
+                    Number(
+                        player.losses || 0
+                    );
+
+
+                const gf =
+                    Number(
+                        player.goalsFor ||
+                        player.gf ||
+                        0
+                    );
+
+
+                const ga =
+                    Number(
+                        player.goalsAgainst ||
+                        player.ga ||
+                        0
+                    );
+
+
+                const gd =
+                    gf - ga;
+
+
+                const pts =
+                    (
+                        wins * 3
+                    ) +
+                    draws;
+
+
+                const gdText =
+                    gd > 0
+                    ? "+" + gd
+                    : String(gd);
+
+
+                const gdClass =
+                    gd > 0
+                    ? "positive-gd"
+                    : gd < 0
+                    ? "negative-gd"
+                    : "";
+
+
+                const image =
+                    player.playerImage
+
+                    ? `
+
+                        <img
+                            src="${player.playerImage}"
+                            alt="Player"
+                        >
+
+                    `
+
+                    : "👤";
+
+
+                rows += `
+
+                    <tr
+                        class="player-row"
+                        onclick="viewPlayer('${player.id}')">
+
+
+                        <td>
+
+                            <div class="player-name-cell">
+
+
+                                <div class="table-avatar">
+
+                                    ${image}
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="table-player-name">
+
+                                        ${escapeHtml(
+                                            player.name ||
+                                            "BMG Player"
+                                        )}
+
+                                    </div>
+
+
+                                    <span class="table-player-role">
+
+                                        BMG PLAYER
+
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+                        </td>
+
+
+                        <td>
+
+                            ${wins}
+
+                        </td>
+
+
+                        <td>
+
+                            ${draws}
+
+                        </td>
+
+
+                        <td>
+
+                            ${losses}
+
+                        </td>
+
+
+                        <td class="points">
+
+                            ${pts}
+
+                        </td>
+
+
+                        <td class="${gdClass}">
+
+                            ${gdText}
+
+                        </td>
+
+
+                        <td>
+
+                            ${gf}
+
+                        </td>
+
+
+                    </tr>
+
+                `;
+
+            }
+        );
+
+
+        grid.innerHTML = `
+
+            <div class="players-table-wrap">
+
+
+                <table class="players-table">
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                PLAYER
+                            </th>
+
+                            <th>
+                                W
+                            </th>
+
+                            <th>
+                                D
+                            </th>
+
+                            <th>
+                                L
+                            </th>
+
+                            <th>
+                                PTS
+                            </th>
+
+                            <th>
+                                GD
+                            </th>
+
+                            <th>
+                                GF
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        ${rows}
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+        `;
 
 
     }catch(error){
@@ -2439,12 +3507,19 @@ async function loadPlayers(){
         console.error(error);
 
 
-        grid.innerHTML =
-            `<div class="empty">
+        grid.innerHTML = `
+
+            <div class="empty">
+
                 ❌ Could not load players.
+
                 <br><br>
+
                 Please check Firestore rules.
-            </div>`;
+
+            </div>
+
+        `;
 
     }
 
@@ -2452,161 +3527,9 @@ async function loadPlayers(){
 
 
 
-/* ================= PLAYER CARD ================= */
-
-function createPlayerCard(
-    player,
-    playerId
-){
-
-    const grid =
-        document.getElementById(
-            "playersGrid"
-        );
-
-
-    const card =
-        document.createElement("div");
-
-
-    card.className =
-        "player-card";
-
-
-    const image =
-        player.playerImage
-        ? `<img src="${player.playerImage}" alt="Player">`
-        : "👤";
-
-
-    card.innerHTML = `
-
-        <div class="player-photo">
-
-            ${image}
-
-        </div>
-
-
-        <h3>
-
-            ${escapeHtml(
-                player.name || "BMG Player"
-            )}
-
-        </h3>
-
-
-        <span class="player-role">
-
-            ⚡ BMG PLAYER
-
-        </span>
-
-
-        <div class="player-info">
-
-
-            <div class="info-row">
-
-                <span class="info-label">
-                    🎮 Konami UID
-                </span>
-
-                <span class="info-value">
-
-                    ${escapeHtml(
-                        player.konamiUid || "-"
-                    )}
-
-                </span>
-
-            </div>
-
-
-            <div class="info-row">
-
-                <span class="info-label">
-                    📱 Device
-                </span>
-
-                <span class="info-value">
-
-                    ${escapeHtml(
-                        player.deviceModel || "-"
-                    )}
-
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="player-stats">
-
-
-            <div class="stat">
-
-                <strong>
-                    ${player.wins || 0}
-                </strong>
-
-                <span>
-                    WINS
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    ${player.losses || 0}
-                </strong>
-
-                <span>
-                    LOSSES
-                </span>
-
-            </div>
-
-
-            <div class="stat">
-
-                <strong>
-                    ${player.matches || 0}
-                </strong>
-
-                <span>
-                    MATCHES
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-        <button
-            class="view-profile"
-            onclick="viewPlayer('${playerId}')">
-
-            👤 View Profile
-
-        </button>
-
-    `;
-
-
-    grid.appendChild(card);
-
-}
-
-
-
-/* ================= VIEW PLAYER ================= */
+/* =====================================================
+   VIEW PLAYER
+===================================================== */
 
 window.viewPlayer =
 async function(playerId){
@@ -2622,10 +3545,14 @@ async function(playerId){
 
 
         const playerSnap =
-            await getDoc(playerRef);
+            await getDoc(
+                playerRef
+            );
 
 
-        if(!playerSnap.exists()){
+        if(
+            !playerSnap.exists()
+        ){
 
             alert(
                 "Player profile not found."
@@ -2645,6 +3572,7 @@ async function(playerId){
 
         console.error(error);
 
+
         alert(
             "Could not open player profile."
         );
@@ -2655,7 +3583,9 @@ async function(playerId){
 
 
 
-/* ================= SHOW PROFILE ================= */
+/* =====================================================
+   SHOW PUBLIC PROFILE
+===================================================== */
 
 function showPlayerProfile(player){
 
@@ -2665,13 +3595,18 @@ function showPlayerProfile(player){
         );
 
 
-    if(player.playerImage){
+    if(
+        player.playerImage
+    ){
 
-        photo.innerHTML =
-            `<img
+        photo.innerHTML = `
+
+            <img
                 src="${player.playerImage}"
                 alt="Player"
-            >`;
+            >
+
+        `;
 
     }else{
 
@@ -2684,7 +3619,8 @@ function showPlayerProfile(player){
     document.getElementById(
         "profileName"
     ).textContent =
-        player.name || "BMG Player";
+        player.name ||
+        "BMG Player";
 
 
     document.getElementById(
@@ -2692,66 +3628,130 @@ function showPlayerProfile(player){
     ).textContent =
         "⚡ BMG " +
         String(
-            player.role || "PLAYER"
+            player.role ||
+            "PLAYER"
         ).toUpperCase();
 
 
     document.getElementById(
         "profileKonami"
     ).textContent =
-        player.konamiUid || "-";
+        player.konamiUid ||
+        "-";
 
 
     document.getElementById(
         "profileDevice"
     ).textContent =
-        player.deviceModel || "-";
+        player.deviceModel ||
+        "-";
 
 
-    document.getElementById(
-        "profileEmail"
-    ).textContent =
-        player.email || "-";
+    const wins =
+        Number(
+            player.wins || 0
+        );
 
 
-    document.getElementById(
-        "profileUid"
-    ).textContent =
-        player.uid || "-";
+    const draws =
+        Number(
+            player.draws || 0
+        );
+
+
+    const losses =
+        Number(
+            player.losses || 0
+        );
+
+
+    const gf =
+        Number(
+            player.goalsFor ||
+            player.gf ||
+            0
+        );
+
+
+    const ga =
+        Number(
+            player.goalsAgainst ||
+            player.ga ||
+            0
+        );
+
+
+    const gd =
+        gf - ga;
+
+
+    const points =
+        (
+            wins * 3
+        ) +
+        draws;
 
 
     document.getElementById(
         "profileWins"
     ).textContent =
-        player.wins || 0;
+        wins;
+
+
+    document.getElementById(
+        "profileDraws"
+    ).textContent =
+        draws;
 
 
     document.getElementById(
         "profileLosses"
     ).textContent =
-        player.losses || 0;
+        losses;
 
 
     document.getElementById(
-        "profileMatches"
+        "profilePoints"
     ).textContent =
-        player.matches || 0;
+        points;
+
+
+    document.getElementById(
+        "profileGD"
+    ).textContent =
+        gd > 0
+        ? "+" + gd
+        : gd;
+
+
+    document.getElementById(
+        "profileGF"
+    ).textContent =
+        gf;
 
 
     document
-    .getElementById("profileModal")
-    .classList.add("active");
+    .getElementById(
+        "profileModal"
+    )
+    .classList.add(
+        "active"
+    );
 
 }
 
 
 
-/* ================= CURRENT PLAYER PROFILE ================= */
+/* =====================================================
+   CURRENT USER PROFILE
+===================================================== */
 
 window.openPlayerProfile =
 function(){
 
-    if(!currentPlayerData){
+    if(
+        !currentPlayerData
+    ){
 
         alert(
             "Player information is loading..."
@@ -2770,24 +3770,32 @@ function(){
 
 
 
-/* ================= LOGOUT ================= */
+/* =====================================================
+   LOGOUT
+===================================================== */
 
 window.logoutUser =
 async function(){
 
     try{
 
-        await signOut(auth);
+        await signOut(
+            auth
+        );
+
 
         closeProfile();
+
 
         alert(
             "✅ You have been logged out."
         );
 
+
     }catch(error){
 
         console.error(error);
+
 
         alert(
             "❌ Logout failed."
@@ -2799,7 +3807,9 @@ async function(){
 
 
 
-/* ================= ERROR MESSAGE ================= */
+/* =====================================================
+   ERROR MESSAGES
+===================================================== */
 
 function getErrorMessage(code){
 
@@ -2807,32 +3817,38 @@ function getErrorMessage(code){
 
         case "auth/email-already-in-use":
 
-            return "This email is already registered.";
+            return
+            "This email is already registered.";
 
 
         case "auth/invalid-email":
 
-            return "Invalid email address.";
+            return
+            "Invalid email address.";
 
 
         case "auth/weak-password":
 
-            return "Password must be at least 6 characters.";
+            return
+            "Password must be at least 6 characters.";
 
 
         case "auth/invalid-credential":
 
-            return "Wrong email or password.";
+            return
+            "Wrong email or password.";
 
 
         case "auth/network-request-failed":
 
-            return "Network error. Check your internet.";
+            return
+            "Network error. Check your internet.";
 
 
         default:
 
-            return "Something went wrong. Try again.";
+            return
+            "Something went wrong. Try again.";
 
     }
 
@@ -2840,27 +3856,46 @@ function getErrorMessage(code){
 
 
 
-/* ================= HTML SECURITY ================= */
+/* =====================================================
+   HTML SECURITY
+===================================================== */
 
 function escapeHtml(value){
 
     return String(value)
 
-        .replaceAll("&","&amp;")
+        .replaceAll(
+            "&",
+            "&amp;"
+        )
 
-        .replaceAll("<","&lt;")
+        .replaceAll(
+            "<",
+            "&lt;"
+        )
 
-        .replaceAll(">","&gt;")
+        .replaceAll(
+            ">",
+            "&gt;"
+        )
 
-        .replaceAll('"',"&quot;")
+        .replaceAll(
+            '"',
+            "&quot;"
+        )
 
-        .replaceAll("'","&#039;");
+        .replaceAll(
+            "'",
+            "&#039;"
+        );
 
 }
 
 
 
-/* ================= INITIAL LOAD ================= */
+/* =====================================================
+   INITIAL LOAD
+===================================================== */
 
 loadPlayers();
 
@@ -2868,18 +3903,26 @@ loadPlayers();
 
 
 
-<!-- ================= NORMAL JAVASCRIPT ================= -->
+<!-- =====================================================
+     NORMAL JAVASCRIPT
+===================================================== -->
 
 <script>
 
 
-/* LOGIN MODAL */
+/* =====================================================
+   AUTH MODAL
+===================================================== */
 
 function openModal(){
 
     document
-        .getElementById("authModal")
-        .classList.add("active");
+    .getElementById(
+        "authModal"
+    )
+    .classList.add(
+        "active"
+    );
 
 }
 
@@ -2887,106 +3930,170 @@ function openModal(){
 function closeModal(){
 
     document
-        .getElementById("authModal")
-        .classList.remove("active");
+    .getElementById(
+        "authModal"
+    )
+    .classList.remove(
+        "active"
+    );
 
 }
 
 
-/* PROFILE MODAL */
+
+/* =====================================================
+   PROFILE MODAL
+===================================================== */
 
 function closeProfile(){
 
     document
-        .getElementById("profileModal")
-        .classList.remove("active");
+    .getElementById(
+        "profileModal"
+    )
+    .classList.remove(
+        "active"
+    );
 
 }
 
 
-/* LOGIN TAB */
+
+/* =====================================================
+   LOGIN TAB
+===================================================== */
 
 function showLogin(){
 
     document
-        .getElementById("loginForm")
-        .style.display="block";
+    .getElementById(
+        "loginForm"
+    )
+    .style.display =
+        "block";
 
 
     document
-        .getElementById("registerForm")
-        .style.display="none";
+    .getElementById(
+        "registerForm"
+    )
+    .style.display =
+        "none";
 
 
     document
-        .getElementById("loginTab")
-        .classList.add("active");
+    .getElementById(
+        "loginTab"
+    )
+    .classList.add(
+        "active"
+    );
 
 
     document
-        .getElementById("registerTab")
-        .classList.remove("active");
+    .getElementById(
+        "registerTab"
+    )
+    .classList.remove(
+        "active"
+    );
 
 
     document
-        .getElementById("modalTitle")
-        .textContent="Welcome Back";
+    .getElementById(
+        "modalTitle"
+    )
+    .textContent =
+        "Welcome Back";
 
 
     document
-        .getElementById("message")
-        .textContent="";
+    .getElementById(
+        "message"
+    )
+    .textContent =
+        "";
 
 }
 
 
-/* REGISTER TAB */
+
+/* =====================================================
+   REGISTER TAB
+===================================================== */
 
 function showRegister(){
 
     document
-        .getElementById("loginForm")
-        .style.display="none";
+    .getElementById(
+        "loginForm"
+    )
+    .style.display =
+        "none";
 
 
     document
-        .getElementById("registerForm")
-        .style.display="block";
+    .getElementById(
+        "registerForm"
+    )
+    .style.display =
+        "block";
 
 
     document
-        .getElementById("registerTab")
-        .classList.add("active");
+    .getElementById(
+        "registerTab"
+    )
+    .classList.add(
+        "active"
+    );
 
 
     document
-        .getElementById("loginTab")
-        .classList.remove("active");
+    .getElementById(
+        "loginTab"
+    )
+    .classList.remove(
+        "active"
+    );
 
 
     document
-        .getElementById("modalTitle")
-        .textContent="Create Player Account";
+    .getElementById(
+        "modalTitle"
+    )
+    .textContent =
+        "Create Player Account";
 
 
     document
-        .getElementById("message")
-        .textContent="";
+    .getElementById(
+        "message"
+    )
+    .textContent =
+        "";
 
 }
 
 
-/* CLOSE MODAL WHEN CLICK OUTSIDE */
+
+/* =====================================================
+   CLOSE MODAL OUTSIDE
+===================================================== */
 
 document
-.getElementById("authModal")
+.getElementById(
+    "authModal"
+)
 .addEventListener(
     "click",
     function(e){
 
         if(
             e.target ===
-            document.getElementById("authModal")
+            document.getElementById(
+                "authModal"
+            )
         ){
 
             closeModal();
@@ -2997,15 +4104,20 @@ document
 );
 
 
+
 document
-.getElementById("profileModal")
+.getElementById(
+    "profileModal"
+)
 .addEventListener(
     "click",
     function(e){
 
         if(
             e.target ===
-            document.getElementById("profileModal")
+            document.getElementById(
+                "profileModal"
+            )
         ){
 
             closeProfile();
@@ -3015,8 +4127,10 @@ document
     }
 );
 
+
 </script>
 
 
 </body>
+
 </html>
