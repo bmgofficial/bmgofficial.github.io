@@ -95,6 +95,10 @@ button{
     padding:11px 18px;
     border-radius:10px;
     font-weight:700;
+    max-width:170px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
 }
 
 /* HERO */
@@ -388,6 +392,8 @@ footer{
 .modal-box{
     width:100%;
     max-width:430px;
+    max-height:90vh;
+    overflow-y:auto;
     background:#10151e;
     border:1px solid #293448;
     border-radius:18px;
@@ -476,6 +482,105 @@ footer{
     text-align:center;
 }
 
+/* PLAYER PROFILE */
+
+.profile-header{
+    text-align:center;
+    padding:5px 0 20px;
+}
+
+.profile-avatar{
+    width:76px;
+    height:76px;
+    margin:0 auto 14px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#246cff,#7c3cff);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    box-shadow:0 10px 30px rgba(36,108,255,.25);
+}
+
+.profile-name{
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:6px;
+}
+
+.profile-role{
+    color:#6d9fff;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.profile-info{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:5px;
+}
+
+.profile-row{
+    background:#0a0f17;
+    border:1px solid #222c3c;
+    border-radius:10px;
+    padding:12px 14px;
+}
+
+.profile-label{
+    color:#6f7b8f;
+    font-size:11px;
+    margin-bottom:5px;
+}
+
+.profile-value{
+    color:#fff;
+    font-size:14px;
+    word-break:break-all;
+}
+
+.profile-stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:8px;
+    margin:15px 0;
+}
+
+.stat-box{
+    background:#0a0f17;
+    border:1px solid #222c3c;
+    border-radius:10px;
+    padding:13px 5px;
+    text-align:center;
+}
+
+.stat-number{
+    font-size:19px;
+    font-weight:800;
+    color:#4d8dff;
+}
+
+.stat-label{
+    color:#687489;
+    font-size:10px;
+    margin-top:4px;
+}
+
+.logout-btn{
+    width:100%;
+    padding:13px;
+    margin-top:18px;
+    background:#9d2929;
+    color:#fff;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.logout-btn:hover{
+    background:#c52f2f;
+}
+
 /* MOBILE */
 
 @media(max-width:850px){
@@ -537,6 +642,25 @@ footer{
     .secondary{
         text-align:center;
     }
+
+    .login-btn{
+        padding:10px 12px;
+        font-size:12px;
+        max-width:125px;
+    }
+
+    .logo{
+        font-size:16px;
+    }
+
+    .logo-icon{
+        width:35px;
+        height:35px;
+    }
+
+    .profile-stats{
+        gap:6px;
+    }
 }
 </style>
 </head>
@@ -560,7 +684,7 @@ footer{
         <a href="#players">Players</a>
     </nav>
 
-    <button class="login-btn" onclick="openModal()">
+    <button class="login-btn" id="loginButton" onclick="openModal()">
         Login / Register
     </button>
 
@@ -932,6 +1056,123 @@ Create Player Account
 </div>
 
 
+<!-- PLAYER PROFILE MODAL -->
+
+<div class="modal" id="playerModal">
+
+<div class="modal-box">
+
+<button class="close" onclick="closePlayerMenu()">×</button>
+
+<div class="profile-header">
+
+    <div class="profile-avatar">
+        👤
+    </div>
+
+    <div class="profile-name" id="profileName">
+        Player
+    </div>
+
+    <div class="profile-role">
+        ⚡ BMG OFFICIAL PLAYER
+    </div>
+
+</div>
+
+
+<!-- PLAYER STATS -->
+
+<div class="profile-stats">
+
+    <div class="stat-box">
+        <div class="stat-number" id="profileMatches">0</div>
+        <div class="stat-label">MATCHES</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-number" id="profileWins">0</div>
+        <div class="stat-label">WINS</div>
+    </div>
+
+    <div class="stat-box">
+        <div class="stat-number" id="profileLosses">0</div>
+        <div class="stat-label">LOSSES</div>
+    </div>
+
+</div>
+
+
+<!-- PLAYER INFORMATION -->
+
+<div class="profile-info">
+
+    <div class="profile-row">
+
+        <div class="profile-label">
+            EFOOTBALL ID
+        </div>
+
+        <div class="profile-value" id="profileEfootballId">
+            Loading...
+        </div>
+
+    </div>
+
+
+    <div class="profile-row">
+
+        <div class="profile-label">
+            EMAIL
+        </div>
+
+        <div class="profile-value" id="profileEmail">
+            Loading...
+        </div>
+
+    </div>
+
+
+    <div class="profile-row">
+
+        <div class="profile-label">
+            PLAYER UID
+        </div>
+
+        <div class="profile-value" id="profileUid">
+            Loading...
+        </div>
+
+    </div>
+
+
+    <div class="profile-row">
+
+        <div class="profile-label">
+            ROLE
+        </div>
+
+        <div class="profile-value" id="profileRole">
+            Player
+        </div>
+
+    </div>
+
+</div>
+
+
+<button
+    class="logout-btn"
+    type="button"
+    onclick="logoutPlayer()"
+>
+    🚪 Logout
+</button>
+
+</div>
+</div>
+
+
 <!-- FIREBASE -->
 
 <script type="module">
@@ -943,13 +1184,15 @@ import {
     getAuth,
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
-    onAuthStateChanged
+    onAuthStateChanged,
+    signOut
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
 
 import {
     getFirestore,
     doc,
     setDoc,
+    getDoc,
     serverTimestamp
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
 
@@ -981,18 +1224,22 @@ const db = getFirestore(app);
 
 /* LOGIN */
 
-document.getElementById("loginForm").addEventListener("submit", async (e)=>{
+document
+.getElementById("loginForm")
+.addEventListener("submit", async (e)=>{
 
     e.preventDefault();
 
     const email =
-        document.getElementById("loginEmail").value;
+        document.getElementById("loginEmail").value.trim();
 
     const password =
         document.getElementById("loginPassword").value;
 
     const message =
         document.getElementById("message");
+
+    message.textContent = "Logging in...";
 
     try{
 
@@ -1005,7 +1252,9 @@ document.getElementById("loginForm").addEventListener("submit", async (e)=>{
         message.textContent =
             "✅ Login successful!";
 
-        setTimeout(closeModal,1000);
+        setTimeout(()=>{
+            closeModal();
+        },800);
 
     }catch(error){
 
@@ -1019,18 +1268,20 @@ document.getElementById("loginForm").addEventListener("submit", async (e)=>{
 
 /* REGISTER */
 
-document.getElementById("registerForm").addEventListener("submit", async (e)=>{
+document
+.getElementById("registerForm")
+.addEventListener("submit", async (e)=>{
 
     e.preventDefault();
 
     const name =
-        document.getElementById("playerName").value;
+        document.getElementById("playerName").value.trim();
 
     const efootballId =
-        document.getElementById("efootballId").value;
+        document.getElementById("efootballId").value.trim();
 
     const email =
-        document.getElementById("registerEmail").value;
+        document.getElementById("registerEmail").value.trim();
 
     const password =
         document.getElementById("registerPassword").value;
@@ -1038,6 +1289,7 @@ document.getElementById("registerForm").addEventListener("submit", async (e)=>{
     const message =
         document.getElementById("message");
 
+    message.textContent = "Creating player account...";
 
     try{
 
@@ -1066,6 +1318,12 @@ document.getElementById("registerForm").addEventListener("submit", async (e)=>{
 
                 role:"player",
 
+                matches:0,
+
+                wins:0,
+
+                losses:0,
+
                 createdAt:serverTimestamp()
 
             }
@@ -1075,7 +1333,13 @@ document.getElementById("registerForm").addEventListener("submit", async (e)=>{
         message.textContent =
             "✅ Player account created!";
 
-        document.getElementById("registerForm").reset();
+        document
+            .getElementById("registerForm")
+            .reset();
+
+        setTimeout(()=>{
+            closeModal();
+        },1000);
 
     }catch(error){
 
@@ -1091,56 +1355,215 @@ document.getElementById("registerForm").addEventListener("submit", async (e)=>{
 
 onAuthStateChanged(auth, async (user) => {
 
-    const loginBtn = document.querySelector(".login-btn");
+    const loginBtn =
+        document.getElementById("loginButton");
 
-    if (user) {
 
-        console.log("Logged in:", user.email);
+    if(user){
 
-        // Get player data from Firestore
-        try {
+        console.log("Logged in:",user.email);
 
-            const { getDoc } = await import(
-                "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js"
-            );
 
-            const playerRef = doc(db, "players", user.uid);
-            const playerSnap = await getDoc(playerRef);
+        try{
 
-            if (playerSnap.exists()) {
+            const playerRef =
+                doc(db,"players",user.uid);
 
-                const player = playerSnap.data();
+            const playerSnap =
+                await getDoc(playerRef);
 
-                loginBtn.textContent = "👤 " + player.name;
 
-            } else {
+            if(playerSnap.exists()){
 
-                loginBtn.textContent = "👤 Player";
+                const player =
+                    playerSnap.data();
+
+
+                /* NAVBAR PLAYER NAME */
+
+                loginBtn.textContent =
+                    "👤 " + (player.name || "Player");
+
+
+                /* PROFILE DATA */
+
+                document
+                    .getElementById("profileName")
+                    .textContent =
+                    player.name || "Player";
+
+
+                document
+                    .getElementById("profileEfootballId")
+                    .textContent =
+                    player.efootballId || "Not available";
+
+
+                document
+                    .getElementById("profileEmail")
+                    .textContent =
+                    player.email || user.email || "Not available";
+
+
+                document
+                    .getElementById("profileUid")
+                    .textContent =
+                    player.uid || user.uid;
+
+
+                document
+                    .getElementById("profileRole")
+                    .textContent =
+                    player.role || "player";
+
+
+                /* FUTURE STATS */
+
+                document
+                    .getElementById("profileMatches")
+                    .textContent =
+                    player.matches || 0;
+
+
+                document
+                    .getElementById("profileWins")
+                    .textContent =
+                    player.wins || 0;
+
+
+                document
+                    .getElementById("profileLosses")
+                    .textContent =
+                    player.losses || 0;
+
+
+            }else{
+
+                loginBtn.textContent =
+                    "👤 Player";
+
+                document
+                    .getElementById("profileName")
+                    .textContent =
+                    "Player";
+
+                document
+                    .getElementById("profileEfootballId")
+                    .textContent =
+                    "Not available";
+
+                document
+                    .getElementById("profileEmail")
+                    .textContent =
+                    user.email || "Not available";
+
+                document
+                    .getElementById("profileUid")
+                    .textContent =
+                    user.uid;
 
             }
 
-        } catch (error) {
 
-            console.error(error);
-            loginBtn.textContent = "👤 Player";
+            /* PROFILE BUTTON */
+
+            loginBtn.onclick = function(){
+
+                openPlayerMenu();
+
+            };
+
+
+        }catch(error){
+
+            console.error(
+                "Firestore profile error:",
+                error
+            );
+
+            loginBtn.textContent =
+                "👤 Player";
+
+            loginBtn.onclick = function(){
+
+                openPlayerMenu();
+
+            };
 
         }
 
-        loginBtn.onclick = function () {
-            openPlayerMenu();
-        };
 
-    } else {
+    }else{
 
-        loginBtn.textContent = "Login / Register";
+        /* LOGGED OUT */
 
-        loginBtn.onclick = function () {
+        loginBtn.textContent =
+            "Login / Register";
+
+
+        loginBtn.onclick = function(){
+
             openModal();
+
         };
+
+
+        /* RESET PROFILE */
+
+        document
+            .getElementById("profileName")
+            .textContent =
+            "Player";
+
+        document
+            .getElementById("profileEfootballId")
+            .textContent =
+            "Not available";
+
+        document
+            .getElementById("profileEmail")
+            .textContent =
+            "Not available";
+
+        document
+            .getElementById("profileUid")
+            .textContent =
+            "Not available";
 
     }
 
 });
+
+
+/* LOGOUT */
+
+window.logoutPlayer = async function(){
+
+    try{
+
+        await signOut(auth);
+
+        closePlayerMenu();
+
+        console.log("Player logged out.");
+
+    }catch(error){
+
+        console.error(
+            "Logout error:",
+            error
+        );
+
+        alert(
+            "Logout failed. Please try again."
+        );
+
+    }
+
+};
+
+
+/* ERROR MESSAGES */
 
 function getErrorMessage(code){
 
@@ -1158,6 +1581,15 @@ function getErrorMessage(code){
         case "auth/invalid-credential":
             return "Wrong email or password.";
 
+        case "auth/user-not-found":
+            return "No account found with this email.";
+
+        case "auth/wrong-password":
+            return "Wrong password.";
+
+        case "auth/too-many-requests":
+            return "Too many attempts. Try again later.";
+
         default:
             return "Something went wrong. Try again.";
 
@@ -1168,15 +1600,10 @@ function getErrorMessage(code){
 </script>
 
 
+<!-- NORMAL JAVASCRIPT -->
+
 <script>
-    
-function openPlayerMenu(){
 
-    const user = window.firebaseUser;
-
-    alert("Player account is active!");
-
-}
 function openModal(){
 
     document
@@ -1185,6 +1612,7 @@ function openModal(){
 
 }
 
+
 function closeModal(){
 
     document
@@ -1192,6 +1620,55 @@ function closeModal(){
         .classList.remove("active");
 
 }
+
+
+function openPlayerMenu(){
+
+    document
+        .getElementById("playerModal")
+        .classList.add("active");
+
+}
+
+
+function closePlayerMenu(){
+
+    document
+        .getElementById("playerModal")
+        .classList.remove("active");
+
+}
+
+
+/* CLOSE MODAL WHEN CLICKING OUTSIDE */
+
+document
+.getElementById("authModal")
+.addEventListener("click",function(e){
+
+    if(e.target === this){
+
+        closeModal();
+
+    }
+
+});
+
+
+document
+.getElementById("playerModal")
+.addEventListener("click",function(e){
+
+    if(e.target === this){
+
+        closePlayerMenu();
+
+    }
+
+});
+
+
+/* LOGIN TAB */
 
 function showLogin(){
 
@@ -1203,6 +1680,7 @@ function showLogin(){
         .getElementById("registerForm")
         .style.display="none";
 
+
     document
         .getElementById("loginTab")
         .classList.add("active");
@@ -1211,15 +1689,20 @@ function showLogin(){
         .getElementById("registerTab")
         .classList.remove("active");
 
+
     document
         .getElementById("modalTitle")
         .textContent="Welcome Back";
+
 
     document
         .getElementById("message")
         .textContent="";
 
 }
+
+
+/* REGISTER TAB */
 
 function showRegister(){
 
@@ -1231,6 +1714,7 @@ function showRegister(){
         .getElementById("registerForm")
         .style.display="block";
 
+
     document
         .getElementById("registerTab")
         .classList.add("active");
@@ -1239,9 +1723,11 @@ function showRegister(){
         .getElementById("loginTab")
         .classList.remove("active");
 
+
     document
         .getElementById("modalTitle")
         .textContent="Create Player Account";
+
 
     document
         .getElementById("message")
